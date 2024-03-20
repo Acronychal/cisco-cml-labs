@@ -6,11 +6,13 @@ To start navigate to /var/lib/libvirt/images/virl-base-images/
 
 Then copy desired image
 ```
-cp -a ubuntu-20-04-<date> <target target name>
-
+cp -a ubuntu-20-04-<date> <target file name>
 ```
+
 Change directory (cd) into newly created file and edit yaml file matching the target image name 
 - change yaml file name to match vm directory
+- ```mv ubuntu-20-04-<date>.yaml <target file name>.yaml
+  ```
 - edit yaml file contents to
   - id
   - label
@@ -21,7 +23,6 @@ Restart cml service
 
 ```
 systemctl restart virl2.target
-
 ```
 
 log into cml and start lab/ start vm 
@@ -32,7 +33,6 @@ log into cml and start lab/ start vm
 sudo -E -s
 apt update && apt upgrade -y 
 apt install iperf3 mtr net-tools
-
 ```
 
 ## find lab id then navigate to /var/loca/virl2/images
