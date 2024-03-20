@@ -39,9 +39,16 @@ apt update && apt upgrade -y
 apt install iperf3 mtr net-tools
 ```
 
-## find lab id then navigate to /var/loca/virl2/images
+## find lab id located in the lab url then navigate to /var/loca/virl2/images/<labid>
 
-cd into node by id
+```
+cd /var/local/virl2/images/<labid>
+```
+
+## view contents
+```
+ls -lh
+```
 
 ## nodedisk_0 contains changes to node. Use file to review contents. 
 
