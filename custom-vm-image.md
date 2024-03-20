@@ -1,20 +1,23 @@
 # Instructions to create a new image. 
-example used ubuntu-20-04
 
-navigate to /var/lib/libvirt/images/virl-base-images/
-copy desired image
+This example used Ubuntu-20-04 image.
+
+To start navigate to /var/lib/libvirt/images/virl-base-images/
+
+Then copy desired image
 ```
-cp -a ubuntu-20-04-<date> <target name>
+cp -a ubuntu-20-04-<date> <target target name>
 
 ```
-cd into newly created file and edit yaml file
+Change directory (cd) into newly created file and edit yaml file matching the target image name 
 - change yaml file name to match vm directory
 - edit yaml file contents to
-  - name
+  - id
+  - label
   - version
-  - readonly = false
+  - read_only: false
 
-restart cml service
+Restart cml service
 
 ```
 systemctl restart virl2.target
@@ -23,7 +26,7 @@ systemctl restart virl2.target
 
 log into cml and start lab/ start vm 
 
-# update and add any packages to customize the node. 
+## update and add any packages to customize the node. 
 
 ```
 sudo -E -s
@@ -32,13 +35,17 @@ apt install iperf3 mtr net-tools
 
 ```
 
-# find lab id then navigate to /var/loca/virl2/images
+## find lab id then navigate to /var/loca/virl2/images
+
 cd into node by id
-# nodedisk_0 contains changes to node. 
+
+## nodedisk_0 contains changes to node. Use file to review contents. 
+
 ```
 file nodedisk_0
 ```
-commit image to def
+Commit image to back to node image. This will ensure changes are saved. 
+
 ```
 qemu-im commit nodedisk_0
 ```
