@@ -11,7 +11,8 @@ cp -a ubuntu-20-04-<date> <target file name>
 
 Change directory (cd) into newly created file and edit yaml file matching the target image name 
 - change yaml file name to match vm directory
-- ```mv ubuntu-20-04-<date>.yaml <target file name>.yaml
+- ```
+  mv ubuntu-20-04-<date>.yaml <target file name>.yaml
   ```
 - edit yaml file contents to
   - id
