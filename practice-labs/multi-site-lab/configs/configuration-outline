@@ -1,0 +1,31 @@
+## multisite topology 
+## 1 hq site 4 vlan
+## 1 DC site 2 vlan
+## 2 soho sites 2 vlan
+
+
+# Site one
+# ASW1
+# ASW2
+# ASW3
+# ASW4
+# DSW1
+# DSW2
+# R1
+
+# Site two
+# ASW5
+# ASW6
+# ASW7
+# DSW3
+# DSW4
+# DSW5
+# DSW6
+# R2
+
+# Soho Site 1
+# R3
+# ASW8
+# Soho Site 2
+# R4
+# ASW9
