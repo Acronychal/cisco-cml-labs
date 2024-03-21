@@ -7,6 +7,8 @@ interface range g0/0-1
 switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
+vlan 10
+exit
 interface g1/0
 switchport access vlan 10
 exit
