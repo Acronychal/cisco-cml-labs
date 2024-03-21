@@ -49,3 +49,9 @@ interface range g1/0/5-6
 no switchport
 channel-group 1 mode active
 exit
+
+ip routing
+router ospf 1
+network 10.166.6.0 0.0.0.255 area 0
+default-information originate
+
