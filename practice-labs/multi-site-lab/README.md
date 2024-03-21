@@ -1,4 +1,4 @@
-# Multisite lab
+# Multi Site Lab
 
 ![](./configs/cml-multi-site-lab.png)
 
