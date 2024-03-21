@@ -1,0 +1,49 @@
+##DSW1 Configuration Commands
+
+enable
+configure terminal
+hostname DSW1
+interface range g1/0/1-4
+switchport mode trunk
+exit
+vlan 10,20,30,40,50,60
+exit
+
+interface vlan 10
+ip address 172.16.10.254 255.255.255.0
+no shutdown
+exit
+
+interface vlan 20
+ip address 172.16.20.254 255.255.255.0
+no shutdown
+exit
+
+interface vlan 30
+ip address 172.16.30.254 255.255.255.0
+no shutdown
+exit
+
+interface vlan 40
+ip address 172.16.40.254 255.255.255.0
+no shutdown
+exit
+
+interface vlan 50
+ip address 172.16.50.254 255.255.255.0
+no shutdown
+exit
+
+interface vlan 60
+ip address 172.16.60.254 255.255.255.0
+no shutdown
+exit
+
+
+
+
+
+
+interface g1/0
+switchport access vlan 10
+exit
