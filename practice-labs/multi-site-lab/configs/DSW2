@@ -39,3 +39,7 @@ ip address 172.16.60.253 255.255.255.0
 no shutdown
 exit
 
+interface port-channel 1
+ip address 10.166.6.10 255.255.255.252
+no shutdown
+exit
